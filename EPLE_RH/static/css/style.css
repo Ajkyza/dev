@@ -1,0 +1,17 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+}
+

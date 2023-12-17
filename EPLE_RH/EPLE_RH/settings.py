@@ -31,6 +31,12 @@ CRISPY_TEMPLATE_PACK = 'tailwindcss'
 CRISPY_FAIL_SILENTLY = True
 CRISPY_ALLOWED_TEMPLATE_PACKS = ['tailwindcss']
 
+# Définit le modèle d'authentification à utiliser
+AUTH_USER_MODEL = 'authentification.User'
+
+# Active Htmx
+X_FRAME_OPTIONS = 'DENY'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,12 +49,19 @@ INSTALLED_APPS = [
     'personnel',
     'lieux',
     'planning',
+    'authentification',
     'wagtail',
+    'wagtail.contrib.forms',
+    
     'htmx',
     'tailwindcss',
     'pandas',
     'crispy_forms',
     'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -59,6 +72,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'EPLE_RH.urls'

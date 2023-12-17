@@ -1,0 +1,17 @@
+{% load wagtailcore_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <a href="{% url 'login' %}" class="btn btn-primary">Connexion</a>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
